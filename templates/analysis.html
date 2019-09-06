@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+ {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("li").click(function(){
+    $("div").empty();
+  });
+});
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.columns {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+  /* Should be removed. Only for demonstration */
+}
+.columns1 {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  height: 300px; 
+}
+/* Clear floats after the columns */
+.rows:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rows{
+  overflow-y: scroll;
+}
+</style>
+<div>
+<br>
+<br>
+<br>
+  <h3>The Person Analysis Results</h3>
+  <br>
+       
+              <br>
+<div class="row">
+  <div class="columns">
+      <h4><center>Word Cloud<center></h4>
+      <img class="center-block" src="data:image/png;base64,{{ word_cloud }}" width="800">
+
+  </div>
+ <div class="rows">
+   <div class="columns" >
+    <h4>keywords</h4>
+     <table border = 1>
+          {% for value in dictionary %}
+          <tr >
+             <td bgcolor="yellow" ><font color="black"> {{value }} </font></td>
+          </tr>
+     
+        {% endfor %}
+        
+      </table>
+  </div>
+   
+  <div class="columns" >
+    <h4>score</h4>
+     <table border = 1>
+
+            {% for value in score %}
+        
+              <tr>
+                 <td bgcolor="yellow" ><font color="black"> {{ value }}</font> </td>
+              </tr>
+            {% endfor %}
+
+    </table>
+  </div>
+</div>
+</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       <div class="rows">
+       <div class="columns1" >
+        <h4>Title & Link</h4>
+         <table border = 1>
+
+              {% for value1, value2 in headline|zip(link) %}
+              <br><b>{{ value1 }}</b> <br> <a href= "{{value2 }}" >{{value2}}</a>
+               {% endfor %}
+            
+        
+      </table>
+  </div>
+
+
+</div>
+    <div>
+         <h3>The total article relate to {{person}} : {{total}}</h3> 
+          </div>
+{% endblock %}
+
+
+
+
+

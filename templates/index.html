@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+ {% block content %}
+
+
+
+
+
+<section id="home" class="top_banner_bg secondary-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="top_banner">
+				</div>
+				
+				<div class="col-md-6">
+					<div class="present">
+						<form action = "http://localhost:5000/analysis" method = "POST">
+						<h1> The First Website Analyse Review of Person Background
+						  
+						
+						<h5> Enter the   <span>name </span> to be  <b> analysed</b> </h5>
+						 <input type="text" class="form-control" id="inputEmail4" placeholder="Paste Here!" name="person" required >
+						 	<h5> Enter the   <span>dictionary </span> to be  <b> analysed</b> </h5>
+						 
+						<!--<input type="text" name="sentence" id="question_name" onblur="this.value.split(' ').length < 5 ? alert('you need more words here') : '';" />-->
+						<input type="text"    minlength="30" class="form-control" id="inputEmail4" placeholder="Paste Here!" name="sentence" required >
+						<div class="section_btn">
+									<a href="#"> <button class="btn btn-default" type="submit"><i class="fa fa-apple" aria-hidden="true"></i>  Analyse  <i class="fa fa-android" aria-hidden="true"></i></button> </a>	
+						</form>								
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="present_img">
+						<img src="static/images/testi_img1.png" alt="image">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}

@@ -3,7 +3,7 @@
 Adverse media screening involves searching for negative news about a person or business.
 This system involving  scraping,python language as coding and flask as web development
 
-__Run The Program
+__Run The Program__
 
 1. download the file in zip
 2. extract zip folder 

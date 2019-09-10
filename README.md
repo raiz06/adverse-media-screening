@@ -5,9 +5,9 @@ This system involving  scraping,python language as coding and flask as web devel
 
  ![alt tag](https://github.com/raiz06/adverse-media-screening/blob/master/static/images/landingpage.jpg)
 
-                                             __landing page__
+   **landing page**
 
 
  ![alt tag](https://github.com/raiz06/adverse-media-screening/blob/master/static/images/Resultpage.jpg)
  
-                                            __result page__
+   **result page**
